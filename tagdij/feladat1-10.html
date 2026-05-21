@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>SQL - tagdij</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h3>2. Lépés: Kérdések 1-10.</h3>
+            <div id="linkek">
+                <a href="./beallitas.html">Előző</a
+                ><a href="./index.html">Nyitó</a>
+                <a href="./feladat11-20.html">Következő</a>
+            </div>
+            <h3>Kérdések:</h3>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    1. Kérdés: Hogy hívják az egyes ügyfeleket? Jelenítse meg a
+                    nevüket ABC-sorrendben!
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso">Válogasd le a nev-eket, mint "Név"</span>
+                    <span class="masodik">az ugyfel táblából,</span>
+                    <span class="harmadik"
+                        >ahol a nev-ek legyenek ABC sorrendben növekedő
+                        módon!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT nev AS Név</span
+                    ><span class="masodik"> FROM ugyfel</span
+                    ><span class="harmadik"> ORDER BY Név ASC;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    2. Kérdés: Listázza ki a magyarországi ügyfeleket életkoruk
+                    szerint! Kezdje a legfiatalabbal?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben már számolni is kell:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a nev-eket, mint Magyaroszági ügyfelek,
+                        (2026 - szulev)-et mint Életkor</span
+                    >
+                    <span class="masodik">az ugyfel táblából,</span>
+                    <span class="harmadik">ahol az orsz "H",</span>
+                    <span class="harmadik"
+                        >az életkor szerint növekvő sorrendben!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT nev AS "Magyaroszági ügyfelek", (2026 - szulev)
+                        AS Életkor</span
+                    ><span class="masodik"> FROM ugyfel</span
+                    ><span class="harmadik">WHERE orsz = "H"</span
+                    ><span class="harmadik"> ORDER BY Életkor ASC;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    3. Kérdés: Adja meg a Pest megyei ügyfeleket!
+                    (Irányítószámuk 2-vel kezdődik.)
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a nev-eket, mint Pest megyei ügyfelek</span
+                    >
+                    <span class="masodik">az ugyfel táblából,</span>
+                    <span class="harmadik">ahol az irszam 2-vel kezdődik!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT nev AS "Pest megyei ügyfelek"</span
+                    ><span class="masodik"> FROM ugyfel</span
+                    ><span class="harmadik"> WHERE irszam LIKE "2%";</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    4. Kérdés: Mennyi pénzt fizettek be összesen az ügyfelek?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">SUM()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a SUM(osszeg-eket), mint Összes
+                        befizetés</span
+                    >
+                    <span class="masodik">a befiz táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT SUM(osszeg) AS "Összes befizetés"</span
+                    ><span class="masodik"> FROM befiz;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    5. Kérdés: Mekkora összegű egy átlagos befizetés?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell az
+                    <span class="kiemel">AVG()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az AVG(osszeg-eket), mint Átlagos
+                        befizetés</span
+                    >
+                    <span class="masodik">a befiz táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT AVG(osszeg) AS "Átlagos befizetés"</span
+                    ><span class="masodik"> FROM befiz;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    6. Kérdés: Mennyi volt az eddigi legkisebb illetve
+                    legnagyobb befizetett összeg?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">MIN()</span> és
+                    <span class="kiemel">MAX()</span> aggregáló függvényeket:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a MIN(osszeg-eket), mint Legkisebb
+                        befizetés és MAX(osszeg-eket), mint Legnagyobb
+                        befizetés</span
+                    >
+                    <span class="masodik">a befiz táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT MIN(osszeg) AS "Legkisebb befizetés",
+                        MAX(osszeg) AS "Legnagyobb befizetés"</span
+                    ><span class="masodik"> FROM befiz;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    7. Kérdés: Hány darab befizetés szerepel a nyilvántartásban?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                </div>
+                <p>
+                    Ebben az esetben már már használni kell a
+                    <span class="kiemel">COUNT()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a COUNT(azon-okat), mint Befizetések
+                        száma</span
+                    >
+                    <span class="masodik">a befiz táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT COUNT(azon) AS "Befizetések száma"</span
+                    ><span class="masodik"> FROM befiz;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    8. Kérdés: Milyen összegeket, és mikor fizetett Török
+                    Bálint?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már összekötjük a táblákat és a
+                    <span class="kiemel">tagdij</span> adatbázis SQL felületén
+                    dolgozunk:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az osszeg-eket, mint Összegek és a
+                        datum-okat, mint Dátumok</span
+                    >
+                    <span class="masodik">a befiz táblából,</span>
+                    <span class="masodik"
+                        >amit összekötünk az ugyfel táblával,</span
+                    >
+                    <span class="harmadik"
+                        >ahol az ügyfél nev-e Török Bálint!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT befiz.osszeg AS "Összeg", befiz.datum AS
+                        "Dátum"</span
+                    ><span class="masodik"> FROM befiz</span
+                    ><span class="masodik">
+                        INNER JOIN ugyfel ON befiz.azon = ugyfel.azon</span
+                    ><span class="harmadik">
+                        WHERE ugyfel.nev = "Török Bálint";</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    9. Kérdés: Mennyit fizetett összesen Nagy Károly?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span
+                    ><span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már összekötjük a táblákat és a
+                    <span class="kiemel">tagdij</span> adatbázis SQL felületén
+                    dolgozunk. Használni kell a
+                    <span class="kiemel">SUM()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a SUM(osszeg-eket), mint Összes
+                        befizetés</span
+                    >
+                    <span class="masodik">a befiz táblából,</span>
+                    <span class="masodik"
+                        >amit összekötünk az ugyfel táblával,</span
+                    >
+                    <span class="harmadik"
+                        >ahol az ügyfél nev-e Nagy Károly!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT SUM(befiz.osszeg) AS "Összes befizetés"</span
+                    ><span class="masodik"> FROM befiz</span
+                    ><span class="masodik">
+                        INNER JOIN ugyfel ON befiz.azon = ugyfel.azon</span
+                    ><span class="harmadik">
+                        WHERE ugyfel.nev = "Nagy Károly";</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    10. Kérdés: Mennyit fizettek összesen a nem magyarországi
+                    befizetők?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span
+                    ><span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már összekötjük a táblákat és a
+                    <span class="kiemel">tagdij</span> adatbázis SQL felületén
+                    dolgozunk. Használni kell a
+                    <span class="kiemel">SUM()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a SUM(osszeg-eket), mint Összes külföldi
+                        befizetés</span
+                    >
+                    <span class="masodik">a befiz táblából,</span>
+                    <span class="masodik"
+                        >amit összekötünk az ugyfel táblával,</span
+                    >
+                    <span class="harmadik">ahol az ügyfél orsz-e nem "H"!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT SUM(befiz.osszeg) AS "Összes külföldi
+                        befizetés"</span
+                    ><span class="masodik"> FROM befiz</span
+                    ><span class="masodik">
+                        INNER JOIN ugyfel ON befiz.azon = ugyfel.azon</span
+                    ><span class="harmadik">
+                        WHERE ugyfel.orsz &lt;&gt; "H";</span
+                    >
+                </div>
+            </div>
+            <h3>Feladatok:</h3>
+            <div class="feladatok">
+                <p class="kerdes">1. Feladat: Mennyi Kína éves GDP-je?</p>
+                <p><button onclick="felfed(0)">Megoldás</button></p>
+                <div
+                    class="rejtett"
+                    style="display: none"
+                >
+                    <p>
+                        Fogalmazzuk át a kérdést felszólítássá a következőkre
+                        figyelve:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso">1. Mit keresünk?</span>
+                        <span class="masodik">2. Hol keressük?</span>
+                        <span class="harmadik"
+                            >3. Milyen feltételek mellett keressük?</span
+                        >
+                    </div>
+                    <p>Ebben az esetben:</p>
+                    <div class="kerdes-mondat">
+                        <span class="elso"
+                            >Válogasd le a gdp-iket, mint Éves GDP</span
+                        >
+                        <span class="masodik">az orszagok táblából,</span>
+                        <span class="harmadik">ahol az orszag neve Kína!</span>
+                    </div>
+                    <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                    <div class="kerdes-sql">
+                        <span class="elso">SELECT gdp AS "Éves GDP"</span
+                        ><span class="masodik"> FROM orszagok</span
+                        ><span class="harmadik"> WHERE orszag = "Kína";</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feladatok">
+                <p class="kerdes">
+                    2. Feladat: Mely országok pénzneme az euro vagy euró?
+                </p>
+                <p><button onclick="felfed(1)">Megoldás</button></p>
+                <div
+                    class="rejtett"
+                    style="display: none"
+                >
+                    <p>
+                        Fogalmazzuk át a kérdést felszólítássá a következőkre
+                        figyelve:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso">1. Mit keresünk?</span>
+                        <span class="masodik">2. Hol keressük?</span>
+                        <span class="harmadik"
+                            >3. Milyen feltételek mellett keressük?</span
+                        >
+                    </div>
+                    <p>
+                        Ebben az esetben már használni kell az
+                        <span class="kiemel">OR</span> logikai műveletet:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso"
+                            >Válogasd le a orszag-okat, mint Euró-s
+                            országok</span
+                        >
+                        <span class="masodik">az orszagok táblából,</span>
+                        <span class="harmadik"
+                            >ahol a penznem euro vagy a penznem euró!</span
+                        >
+                    </div>
+                    <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                    <div class="kerdes-sql">
+                        <span class="elso"
+                            >SELECT orszag AS "Euró-s országok"</span
+                        ><span class="masodik"> FROM orszagok</span
+                        ><span class="harmadik">
+                            WHERE penznem = "euro" OR penznem = "euró";</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./felfed.js"></script>
+    </body>
+</html>

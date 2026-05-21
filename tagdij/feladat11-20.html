@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>SQL - orszagok</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h3>2. Lépés: Kérdések 11-20.</h3>
+            <div id="linkek">
+                <a href="./feladat1-10.html">Előző</a
+                ><a href="./index.html">Nyitó</a>
+                <!-- <a href="./feladat11-20.html">Következő</a> -->
+            </div>
+            <h3>Kérdések:</h3>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    11. Kérdés: Mennyi az országok átlagos népessége?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                </div>
+                <p>
+                    Ebben az esetben már használni kell az
+                    <span class="kiemel">AVG()</span> aggregáló függvényt és
+                    számolni is kell:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az AVG(nepessegek-eket * 1000), mint
+                        Átlagos népesség</span
+                    >
+                    <span class="masodik">az orszagok táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT AVG(nepesseg * 1000) AS "Átlagos népesség"</span
+                    ><span class="masodik"> FROM orszagok;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    12. Kérdés: Mennyi az országok átlagos területe?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                </div>
+                <p>
+                    Ebben az esetben már használni kell az
+                    <span class="kiemel">AVG()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az AVG(terulet-eket), mint
+                        Átlagos terület</span
+                    >
+                    <span class="masodik">az orszagok táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT AVG(terulet) AS "Átlagos terület"</span
+                    ><span class="masodik"> FROM orszagok;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    13. Kérdés: Mennyi a Föld népsűrűsége?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">SUM()</span> aggregáló függvényt és
+                    számolni is kell:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a SUM(nepesseg-eket * 1000) / SUM(terulet-eket), mint
+                        Föld népsűrűsége</span
+                    >
+                    <span class="masodik">az orszagok táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT SUM(nepesseg * 1000) / SUM(terulet) AS "Átlagos terület"</span
+                    ><span class="masodik"> FROM orszagok;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    14. Kérdés: Hány 1.000.000 km<sup>2</sup>-nél nagyobb területű ország van?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">COUNT()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a COUNT(orszag-okat), mint
+                        Nagyobb területű országok</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik"
+                        >ahol a terulet nagyobb, mint 1000000!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT COUNT(terulet) AS "Nagyobb területű országok"</span
+                    ><span class="masodik"> FROM orszagok</span>
+                    <span class="harmadik"
+                        >WHERE terulet &gt; 1000000;</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    15. Kérdés: Hány 100 km<sup>2</sup>-nél kisebb területű ország van?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">COUNT()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a COUNT(orszag-okat), mint
+                        Kisebb területű országok</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik"
+                        >ahol a terulet kisebb, mint 100!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT COUNT(terulet) AS "Kisebb területű országok"</span
+                    ><span class="masodik"> FROM orszagok</span>
+                    <span class="harmadik"
+                        >WHERE terulet &lt; 100;</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    16. Hány 20.000 főnél kevesebb lakosú ország van?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">COUNT()</span> aggregáló függvényt és számolni is kell:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a COUNT(orszag-okat), mint
+                        Kevesebb lakosságú országok</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik"
+                        >ahol a nepesseg kevesebb, mint 20000!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT COUNT(nepesseg) AS "Kevesebb lakosságú országok"</span
+                    ><span class="masodik"> FROM orszagok</span>
+                    <span class="harmadik"
+                        >WHERE (nepesseg * 1000) &lt; 20000;</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    17. Hány országra igaz, hogy területe kisebb 100 km<sup>2</sup>-nél, vagy pedig a lakossága kevesebb 20.000 főnél?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">COUNT()</span> aggregáló függvényt, az
+                        <span class="kiemel">OR</span> logikai műveletet és számolni is kell:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a COUNT(orszag-okat), mint
+                        Kisebb vagy kevesebb országok</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik"
+                        >ahol a terulet kisebb, mint 100 vagy a nepesseg kevesebb, mint 20000!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT COUNT(nepesseg) AS "Kisebb vagy kevesebb országok"</span
+                    ><span class="masodik"> FROM orszagok</span>
+                    <span class="harmadik"
+                        >WHERE terulet &lt; 100 OR (nepesseg * 1000) &lt; 20000;</span
+                    >
+                </div>
+            </div>
+            <h3>Feladatok:</h3>
+            <div class="feladatok">
+                <p class="kerdes">1. Feladat: Mi MADAGASZKÁR fővárosa?</p>
+                <p><button onclick="felfed(0)">Megoldás</button></p>
+                <div
+                    class="rejtett"
+                    style="display: none"
+                >
+                    <p>
+                        Fogalmazzuk át a kérdést felszólítássá a következőkre
+                        figyelve:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso">1. Mit keresünk?</span>
+                        <span class="masodik">2. Hol keressük?</span>
+                        <span class="harmadik"
+                            >3. Milyen feltételek mellett keressük?</span
+                        >
+                    </div>
+                    <p>Ebben az esetben:</p>
+                    <div class="kerdes-mondat">
+                        <span class="elso"
+                            >Válogasd le a AVG(nepessegek-eket * 1000), mint
+                            Átlagos népesség</span
+                        >
+                        <span class="masodik">az orszagok táblából,</span>
+                        <span class="harmadik"
+                            >ahol az orszag neve MADAGASZKÁR!</span
+                        >
+                    </div>
+                    <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                    <div class="kerdes-sql">
+                        <span class="elso">SELECT fovaros AS "Főváros"</span
+                        ><span class="masodik"> FROM orszagok</span
+                        ><span class="harmadik">
+                            WHERE orszag = "MADAGASZKÁR";</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./felfed.js"></script>
+    </body>
+</html>

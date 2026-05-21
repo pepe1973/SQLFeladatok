@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>SQL - orszagok</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h3>2. Lépés: Kérdések 1-10.</h3>
+            <div id="linkek">
+                <a href="./beallitas.html">Előző</a
+                ><a href="./index.html">Nyitó</a>
+                <a href="./feladat11-20.html">Következő</a>
+            </div>
+            <h3>Kérdések:</h3>
+            <div class="kerdesek">
+                <p class="kerdes">1. Kérdés: Mi MADAGASZKÁR fővárosa?</p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a fovaros-okat, mint Főváros</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik"
+                        >ahol az orszag neve MADAGASZKÁR!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT fovaros AS "Főváros"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik">
+                        WHERE orszag = "MADAGASZKÁR";</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    2. Kérdés: Melyik ország fővárosa OUAGADOUGOU?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az orszag-okat, mint Ország</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik"
+                        >ahol a fovaros neve OUAGADOUGOU!</span
+                    >
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT orszag AS "Ország"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik">
+                        WHERE fovaros = "OUAGADOUGOU";</span
+                    >
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">3. Kérdés: Melyik ország autójele a TT?</p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az orszag-okat, mint Ország</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik">ahol az autojel neve TT!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT orszag AS "Ország"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik"> WHERE autojel = "TT";</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    4. Kérdés: Melyik ország pénzének jele az SGD?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az orszag-okat, mint Ország</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik">ahol a penzjel SGD!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT orszag AS "Ország"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik"> WHERE penzjel = "SGD";</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    5. Kérdés: Melyik ország nemzetközi telefon-hívószáma a 61?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le az orszag-okat, mint Ország</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik">ahol a telefon 61!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT orszag AS "Ország"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik"> WHERE telefon = 61;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">6. Kérdés: Mekkora területű Monaco?</p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a terulet-eket, mint Terület</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik">ahol az orszag Monaco!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso">SELECT terulet AS "Terület"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik"> WHERE orszag = "Monaco";</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">7. Kérdés: Hányan laknak Máltán?</p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben már számolni is kell:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a nepesseg-eket * 1000, mint Népesség</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik">ahol az orszag Málta!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT nepesseg * 1000 AS "Népesség"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik"> WHERE orszag = "Málta";</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">8. Kérdés: Mennyi Japán népsűrűsége?</p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                    <span class="harmadik"
+                        >3. Milyen feltételek mellett keressük?</span
+                    >
+                </div>
+                <p>Ebben az esetben már számolni is kell:</p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a nepesseg-eket * 1000 / terulet, mint
+                        Népsűrűség</span
+                    >
+                    <span class="masodik">az orszagok táblából,</span>
+                    <span class="harmadik">ahol az orszag Japán!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT nepesseg * 1000 / terulet AS "Népsűrűség"</span
+                    ><span class="masodik"> FROM orszagok</span
+                    ><span class="harmadik"> WHERE orszag = "Japán";</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">9. Kérdés: Hány lakosa van a Földnek?</p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">SUM()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a SUM(nepesseg-eket * 1000), mint
+                        Összlakosság</span
+                    >
+                    <span class="masodik">az orszagok táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT SUM(nepesseg * 1000) AS "Összlakosság"</span
+                    ><span class="masodik"> FROM orszagok;</span>
+                </div>
+            </div>
+            <div class="kerdesek">
+                <p class="kerdes">
+                    10. Kérdés: Mennyi az országok területe összesen?
+                </p>
+                <p>
+                    Fogalmazzuk át a kérdést felszólítássá a következőkre
+                    figyelve:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso">1. Mit keresünk?</span>
+                    <span class="masodik">2. Hol keressük?</span>
+                </div>
+                <p>
+                    Ebben az esetben már használni kell a
+                    <span class="kiemel">SUM()</span> aggregáló függvényt:
+                </p>
+                <div class="kerdes-mondat">
+                    <span class="elso"
+                        >Válogasd le a SUM(terulet), mint Összterület</span
+                    >
+                    <span class="masodik">az orszagok táblából!</span>
+                </div>
+                <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                <div class="kerdes-sql">
+                    <span class="elso"
+                        >SELECT SUM(terulet) AS "Összterület"</span
+                    ><span class="masodik"> FROM orszagok;</span>
+                </div>
+            </div>
+            <h3>Feladatok:</h3>
+            <div class="feladatok">
+                <p class="kerdes">1. Feladat: Mennyi Kína éves GDP-je?</p>
+                <p><button onclick="felfed(0)">Megoldás</button></p>
+                <div
+                    class="rejtett"
+                    style="display: none"
+                >
+                    <p>
+                        Fogalmazzuk át a kérdést felszólítássá a következőkre
+                        figyelve:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso">1. Mit keresünk?</span>
+                        <span class="masodik">2. Hol keressük?</span>
+                        <span class="harmadik"
+                            >3. Milyen feltételek mellett keressük?</span
+                        >
+                    </div>
+                    <p>Ebben az esetben:</p>
+                    <div class="kerdes-mondat">
+                        <span class="elso"
+                            >Válogasd le a gdp-iket, mint Éves GDP</span
+                        >
+                        <span class="masodik">az orszagok táblából,</span>
+                        <span class="harmadik">ahol az orszag neve Kína!</span>
+                    </div>
+                    <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                    <div class="kerdes-sql">
+                        <span class="elso">SELECT gdp AS "Éves GDP"</span
+                        ><span class="masodik"> FROM orszagok</span
+                        ><span class="harmadik"> WHERE orszag = "Kína";</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feladatok">
+                <p class="kerdes">
+                    2. Feladat: Mely országok pénzneme az euro vagy euró?
+                </p>
+                <p><button onclick="felfed(1)">Megoldás</button></p>
+                <div
+                    class="rejtett"
+                    style="display: none"
+                >
+                    <p>
+                        Fogalmazzuk át a kérdést felszólítássá a következőkre
+                        figyelve:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso">1. Mit keresünk?</span>
+                        <span class="masodik">2. Hol keressük?</span>
+                        <span class="harmadik"
+                            >3. Milyen feltételek mellett keressük?</span
+                        >
+                    </div>
+                    <p>
+                        Ebben az esetben már használni kell az
+                        <span class="kiemel">OR</span> logikai műveletet:
+                    </p>
+                    <div class="kerdes-mondat">
+                        <span class="elso"
+                            >Válogasd le a orszag-okat, mint Euró-s
+                            országok</span
+                        >
+                        <span class="masodik">az orszagok táblából,</span>
+                        <span class="harmadik"
+                            >ahol a penznem euro vagy a penznem euró!</span
+                        >
+                    </div>
+                    <p>Minden részhez elkészíthető az SQL utasítás:</p>
+                    <div class="kerdes-sql">
+                        <span class="elso"
+                            >SELECT orszag AS "Euró-s országok"</span
+                        ><span class="masodik"> FROM orszagok</span
+                        ><span class="harmadik">
+                            WHERE penznem = "euro" OR penznem = "euró";</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./felfed.js"></script>
+    </body>
+</html>
