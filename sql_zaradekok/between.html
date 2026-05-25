@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>BETWEEN</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">BETWEEN</a></h1>
+            <p>
+                A <span class="kiemel">BETWEEN</span> operátort egy
+                <span class="kiemel">WHERE</span> utasításon belül arra
+                használjuk, hogy ellenőrizzük, egy megadott oszlop (mező) értéke
+                beleesik-e egy megadott tartományba.
+            </p>
+            <p>
+                A tartomány <span class="kiemel">inkluzív</span> - a tartomány
+                kezdő és végértékei is szerepelnek az eredményekben.
+            </p>
+            <p>Az értékek lehetnek számok, szöveg (string) vagy dátumok.</p>
+            <p>
+                Használhatjuk a <span class="kiemel">NOT</span> operátorral
+                együtt is. Ebben az esetben a nem egyezést vizsgáljuk.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Név, Település</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Település
+                    <span class="sql">BETWEEN</span> "Debrecen"
+                    <span class="sql">AND</span> "Pécs";</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_057.png" />
+                <img src="./images/kep_058.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Míg a <span class="kiemel">SELECT</span> az oszlopokra (mező),
+                addig a <span class="kiemel">WHERE</span> a sorokra (rekord)
+                szűr. A kettő metszete adja vissza a
+                <span class="kiemel">eredménytáblát</span>.
+            </p>
+            <p>
+                A
+                <span style="color: green; font-weight: bold">Település</span>
+                oszlopban (mező) keresi a szűrő feltételnek megfelelő értékeket!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Név, Település</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Település
+                    <span class="sql">NOT BETWEEN</span> "Debrecen"
+                    <span class="sql">AND</span> "Pécs";</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_047.png" />
+                <img src="./images/kep_048.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Míg a <span class="kiemel">SELECT</span> az oszlopokra (mező),
+                addig a <span class="kiemel">WHERE</span> a sorokra (rekord)
+                szűr. A kettő metszete adja vissza a
+                <span class="kiemel">eredménytáblát</span>.
+            </p>
+            <p>
+                A
+                <span style="color: green; font-weight: bold">Település</span>
+                oszlopban (mező) keresi a szűrő feltételnek megfelelő értékeket!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Név, Fizetés</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Fizetés
+                    <span class="sql">BETWEEN</span> 400000
+                    <span class="sql">AND</span> 500000;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_059.png" />
+                <img src="./images/kep_060.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Míg a <span class="kiemel">SELECT</span> az oszlopokra (mező),
+                addig a <span class="kiemel">WHERE</span> az oszlopkra szűr. A
+                kettő metszete adja vissza a
+                <span class="kiemel">eredménytáblát</span>.
+            </p>
+            <p>
+                A
+                <span style="color: green; font-weight: bold">Jutalom</span>
+                oszlopban (mező) keresi a szűrő feltételnek megfelelő értékeket!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Név, Születés</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Születés
+                    <span class="sql">BETWEEN</span> "1973-11-05"
+                    <span class="sql">AND</span> "1986-11-05";</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_061.png" />
+                <img src="./images/kep_062.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Míg a <span class="kiemel">SELECT</span> az oszlopokra (mező),
+                addig a <span class="kiemel">WHERE</span> az oszlopkra szűr. A
+                kettő metszete adja vissza a
+                <span class="kiemel">eredménytáblát</span>.
+            </p>
+            <p>
+                A
+                <span style="color: green; font-weight: bold">Születés</span>
+                oszlopban (mező) keresi a szűrő feltételnek megfelelő értékeket!
+            </p>
+        </div>
+    </body>
+</html>

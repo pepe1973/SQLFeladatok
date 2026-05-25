@@ -125,7 +125,7 @@ img {
     height: auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .kepek {
         grid-template-columns: 100%;
         width: 95%;

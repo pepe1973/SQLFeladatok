@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>HAVING</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">HAVING</a></h1>
+            <p>
+                A <span class="kiemel">HAVING</span> utasítást arra használjuk,
+                hogy a <span class="kiemel">GROUP BY</span> utasítás által
+                kapott <span class="kiemel">eredményhalmazt</span> az aggregáló
+                (összesítő) függvényekkel szűrjük.
+            </p>
+            <p>
+                A <span class="kiemel">WHERE</span> záradékkal ellentétben,
+                amely a csoportosítás előtt szűri az egyes sorokat (rekord), a
+                <span class="kiemel">HAVIG</span> utasítás az aggregálás
+                (összesítés) végrehajtása után szűri a csoportokat.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Település</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">GROUP BY</span> Település</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">HAVING</span> Település
+                    <span class="sql">BETWEEN</span> "Miskolc"
+                    <span class="sql">AND</span> "Szeged";</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_063.png" />
+                <img src="./images/kep_068.png" />
+                <img src="./images/kep_069.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Település, </code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">GROUP BY</span> Település</code>
+            </p>
+            <code
+                ><span class="sql">HAVING</span> Település
+                <span class="sql">LIKE</span> "Sz%"
+                <span class="sql">OR</span> Település
+                <span class="sql">LIKE</span> "M%";</code
+            >
+            <div class="kepek">
+                <img src="./images/kep_063.png" />
+                <img src="./images/kep_070.png" />
+                <img src="./images/kep_071.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    >, <span class="sql">COUNT(YEAR(</span>Születés<span
+                        class="sql"
+                        >))</span
+                    ></code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">GROUP BY</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    ></code
+                >
+            </p>
+            <p>
+                <code
+                    ><span class="sql">HAVING</span>
+                    <span class="sql">COUNT(YEAR(</span>Születés<span
+                        class="sql"
+                        >))</span
+                    >
+                    &gt; 1;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_066.png" />
+                <img src="./images/kep_072.png" />
+                <img src="./images/kep_073.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+        </div>
+    </body>
+</html>

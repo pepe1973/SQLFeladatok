@@ -15,26 +15,27 @@
             href="./logo.png"
             type="image/x-icon"
         />
-        <title>Aggregáló függvények: MIN() és MAX()</title>
+        <title>Aggregáló függvény: COUNT()</title>
     </head>
     <body>
         <div id="keret">
             <h1>
-                <a href="./index.html">Aggregáló függvények: MIN() és MAX()</a>
+                <a href="./index.html">Aggregáló függvény: COUNT()</a>
             </h1>
             <p>
-                A <span class="kiemel">MIN()</span> függvény a kiválasztott
-                oszlop (mező) legkisebb értékét adja vissza.
+                A <span class="kiemel">COUNT()</span> függvény visszaadja a
+                megadott kritériumnak megfelelő sorok számát.
             </p>
             <p>
-                A <span class="kiemel">MIN()</span> függvény numerikus,
-                karakterlánc (string) és dátum adattípusokkal működik.
+                A <span class="kiemel">COUNT(*)</span> függvény megszámolja a
+                táblázat sorainak teljes számát (beleértve a
+                <span class="kiemel">NULL</span> értékeket is).
             </p>
             <h3>Példa:</h3>
             <p>
                 <code
                     ><span class="sql">SELECT</span>
-                    <span class="sql">MIN(</span>Születés<span class="sql"
+                    <span class="sql">COUNT(</span>*<span class="sql"
                         >)</span
                     ></code
                 >
@@ -43,19 +44,20 @@
                 <code><span class="sql">FROM</span> dolgozók;</code>
             </p>
             <div class="kepek">
-                <img src="./images/kep_026.png" />
-                <img src="./images/kep_027.png" />
+                <img src="./images/kep_001.png" />
+                <img src="./images/kep_034.png" />
             </div>
             <p>
                 Látható, hogy az <span class="kiemel">eredménytábla</span> a
                 kiválasztott mezőből áll.
             </p>
             <p>Ilyenkor mindig csak egy sorral (rekord) tér vissza.</p>
+
             <h3>Példa:</h3>
             <p>
                 <code
                     ><span class="sql">SELECT</span>
-                    <span class="sql">MIN(</span>Fizetés<span class="sql"
+                    <span class="sql">COUNT(</span>Település<span class="sql"
                         >)</span
                     ></code
                 >
@@ -64,28 +66,21 @@
                 <code><span class="sql">FROM</span> dolgozók;</code>
             </p>
             <div class="kepek">
-                <img src="./images/kep_028.png" />
-                <img src="./images/kep_029.png" />
+                <img src="./images/kep_035.png" />
+                <img src="./images/kep_036.png" />
             </div>
             <p>
                 Látható, hogy az <span class="kiemel">eredménytábla</span> a
                 kiválasztott mezőből áll.
             </p>
             <p>Ilyenkor mindig csak egy sorral (rekord) tér vissza.</p>
-            <h1><a href="./index.html">MAX()</a></h1>
-            <p>
-                A <span class="kiemel">MAX()</span> függvény a kiválasztott
-                oszlop (mező) legnagyobb értékét adja vissza.
-            </p>
-            <p>
-                A <span class="kiemel">MAX()</span> függvény numerikus,
-                karakterlánc (string) és dátum adattípusokkal működik.
-            </p>
+            <p>Vegyük észre hogy minden várost megszámolt, többször is!</p>
             <h3>Példa:</h3>
             <p>
                 <code
                     ><span class="sql">SELECT</span>
-                    <span class="sql">MAX(</span>Születés<span class="sql"
+                    <span class="sql">COUNT(DISTINCT</span> Település<span
+                        class="sql"
                         >)</span
                     ></code
                 >
@@ -94,35 +89,15 @@
                 <code><span class="sql">FROM</span> dolgozók;</code>
             </p>
             <div class="kepek">
-                <img src="./images/kep_030.png" />
-                <img src="./images/kep_031.png" />
+                <img src="./images/kep_004.png" />
+                <img src="./images/kep_037.png" />
             </div>
             <p>
                 Látható, hogy az <span class="kiemel">eredménytábla</span> a
                 kiválasztott mezőből áll.
             </p>
             <p>Ilyenkor mindig csak egy sorral (rekord) tér vissza.</p>
-            <h3>Példa:</h3>
-            <p>
-                <code
-                    ><span class="sql">SELECT</span>
-                    <span class="sql">MAX(</span>Fizetés<span class="sql"
-                        >)</span
-                    ></code
-                >
-            </p>
-            <p>
-                <code><span class="sql">FROM</span> dolgozók;</code>
-            </p>
-            <div class="kepek">
-                <img src="./images/kep_032.png" />
-                <img src="./images/kep_033.png" />
-            </div>
-            <p>
-                Látható, hogy az <span class="kiemel">eredménytábla</span> a
-                kiválasztott mezőből áll.
-            </p>
-            <p>Ilyenkor mindig csak egy sorral (rekord) tér vissza.</p>
+            <p>Vegyük észre hogy minden várost megszámolt, de csak egyszer!</p>
         </div>
     </body>
 </html>

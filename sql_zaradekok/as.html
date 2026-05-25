@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>AS</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">AS</a></h1>
+            <p>
+                Egy alias az <span class="kiemel">AS</span> operátorral jön
+                létre, és gyakran használják az oszlopnevek olvashatóbbá
+                tételére.
+            </p>
+            <p>Egy alias csak az adott lekérdezés időtartama alatt létezik.</p>
+            <p>
+                Ha több szó az alias, de `` jelek (backtick operátor) közé
+                tesszük, akkor a lekérdezés későbbi részében ezzel
+                hivatkozhatunk rá.
+            </p>
+            <p>
+                Ha az alias egy szó, akkor írható "" nélkül is, és igaz ré a
+                fenti megjegyzés.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    >
+                    <span class="sql">AS</span> "Születés éve",
+                    <span class="sql">COUNT(YEAR(</span>Születés<span
+                        class="sql"
+                        >))</span
+                    >
+                    <span class="sql">AS</span> "Évenkénti születés"</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">GROUP BY</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    ></code
+                >
+            </p>
+            <p>
+                <code
+                    ><span class="sql">HAVING</span>
+                    <span class="sql">COUNT(YEAR(</span>Születés<span
+                        class="sql"
+                        >))</span
+                    >
+                    &gt; 1;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_066.png" />
+                <img src="./images/kep_074.png" />
+                <img src="./images/kep_075.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    >
+                    <span class="sql">AS</span> Szuletes,
+                    <span class="sql">COUNT(YEAR(</span>Születés<span
+                        class="sql"
+                        >))</span
+                    >
+                    <span class="sql">AS</span> `Évenkénti születés`</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">GROUP BY</span> Szuletes </code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">HAVING</span> `Évenkénti születés` &gt;
+                    1;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_066.png" />
+                <img src="./images/kep_076.png" />
+                <img src="./images/kep_077.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>LIKE</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">LIKE</a></h1>
+            <p>
+                A <span class="kiemel">LIKE</span> operátort egy
+                <span class="kiemel">WHERE</span> utasításon belül arra
+                használjuk, hogy egy adott mintát keressünk egy oszlop szöveges
+                adatain belül. Sorok (rekord) szűrésére szolgál.
+            </p>
+            <p>
+                Két
+                <span class="kiemel">helyettesítő karaktert</span> (wildcard)
+                használnak gyakran a
+                <span class="kiemel">LIKE</span> operátorral együtt:
+            </p>
+            <ul>
+                <li>
+                    Százalékjel <span class="kiemel">%</span> - nulla, egy vagy
+                    több karaktert jelöl.
+                </li>
+                <li>
+                    Az aláhúzásjel <span class="kiemel">_</span> egyetlen
+                    karaktert jelöl.
+                </li>
+            </ul>
+            <p>A százalékjel és az aláhúzásjel kombinációban is használható!</p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Név, Település</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Település
+                    <span class="sql">LIKE</span> "Sz%";</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_047.png" />
+                <img src="./images/kep_048.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Míg a <span class="kiemel">SELECT</span> az oszlopokra (mező),
+                addig a <span class="kiemel">WHERE</span> a sorokra (rekord)
+                szűr. A kettő metszete adja vissza a
+                <span class="kiemel">eredménytáblát</span>.
+            </p>
+            <p>
+                A
+                <span style="color: green; font-weight: bold">Település</span>
+                oszlopban (mező) keresi a szűrő feltételnek megfelelő értékeket
+                (Sz-szel kezdődő települések)!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Lakcím</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Lakcím
+                    <span class="sql">LIKE</span> "% % % %";</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_049.png" />
+                <img src="./images/kep_050.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Míg a <span class="kiemel">SELECT</span> az oszlopokra (mező),
+                addig a <span class="kiemel">WHERE</span> az oszlopkra szűr. A
+                kettő metszete adja vissza a
+                <span class="kiemel">eredménytáblát</span>.
+            </p>
+            <p>
+                A
+                <span style="color: green; font-weight: bold">Lakcím</span>
+                oszlopban (mező) keresi a szűrő feltételnek megfelelő értékeket
+                (Három szóközt tartalmaz)!
+            </p>
+        </div>
+    </body>
+</html>

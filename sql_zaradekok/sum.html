@@ -15,26 +15,27 @@
             href="./logo.png"
             type="image/x-icon"
         />
-        <title>Aggregáló függvények: MIN() és MAX()</title>
+        <title>Aggregáló függvény: SUM()</title>
     </head>
     <body>
         <div id="keret">
             <h1>
-                <a href="./index.html">Aggregáló függvények: MIN() és MAX()</a>
+                <a href="./index.html">Aggregáló függvény: SUM()</a>
             </h1>
             <p>
-                A <span class="kiemel">MIN()</span> függvény a kiválasztott
-                oszlop (mező) legkisebb értékét adja vissza.
+                A <span class="kiemel">SUM()</span> függvény egy numerikus
+                oszlopban található értékek összegének kiszámítására szolgál.
             </p>
             <p>
-                A <span class="kiemel">MIN()</span> függvény numerikus,
-                karakterlánc (string) és dátum adattípusokkal működik.
+                A <span class="kiemel">SUM()</span> függvény függvény figyelmen
+                kívül hagyja a <span class="kiemel">NULL</span> értékeket az
+                oszlopban.
             </p>
             <h3>Példa:</h3>
             <p>
                 <code
                     ><span class="sql">SELECT</span>
-                    <span class="sql">MIN(</span>Születés<span class="sql"
+                    <span class="sql">SUM(</span>Fizetés<span class="sql"
                         >)</span
                     ></code
                 >
@@ -43,8 +44,8 @@
                 <code><span class="sql">FROM</span> dolgozók;</code>
             </p>
             <div class="kepek">
-                <img src="./images/kep_026.png" />
-                <img src="./images/kep_027.png" />
+                <img src="./images/kep_038.png" />
+                <img src="./images/kep_039.png" />
             </div>
             <p>
                 Látható, hogy az <span class="kiemel">eredménytábla</span> a
@@ -55,7 +56,7 @@
             <p>
                 <code
                     ><span class="sql">SELECT</span>
-                    <span class="sql">MIN(</span>Fizetés<span class="sql"
+                    <span class="sql">SUM(</span>Jutalom<span class="sql"
                         >)</span
                     ></code
                 >
@@ -64,38 +65,8 @@
                 <code><span class="sql">FROM</span> dolgozók;</code>
             </p>
             <div class="kepek">
-                <img src="./images/kep_028.png" />
-                <img src="./images/kep_029.png" />
-            </div>
-            <p>
-                Látható, hogy az <span class="kiemel">eredménytábla</span> a
-                kiválasztott mezőből áll.
-            </p>
-            <p>Ilyenkor mindig csak egy sorral (rekord) tér vissza.</p>
-            <h1><a href="./index.html">MAX()</a></h1>
-            <p>
-                A <span class="kiemel">MAX()</span> függvény a kiválasztott
-                oszlop (mező) legnagyobb értékét adja vissza.
-            </p>
-            <p>
-                A <span class="kiemel">MAX()</span> függvény numerikus,
-                karakterlánc (string) és dátum adattípusokkal működik.
-            </p>
-            <h3>Példa:</h3>
-            <p>
-                <code
-                    ><span class="sql">SELECT</span>
-                    <span class="sql">MAX(</span>Születés<span class="sql"
-                        >)</span
-                    ></code
-                >
-            </p>
-            <p>
-                <code><span class="sql">FROM</span> dolgozók;</code>
-            </p>
-            <div class="kepek">
-                <img src="./images/kep_030.png" />
-                <img src="./images/kep_031.png" />
+                <img src="./images/kep_040.png" />
+                <img src="./images/kep_041.png" />
             </div>
             <p>
                 Látható, hogy az <span class="kiemel">eredménytábla</span> a
@@ -106,7 +77,9 @@
             <p>
                 <code
                     ><span class="sql">SELECT</span>
-                    <span class="sql">MAX(</span>Fizetés<span class="sql"
+                    <span class="sql">SUM(</span>Fizetés<span class="sql"
+                        >)</span
+                    >, <span class="sql">SUM(</span>Jutalom<span class="sql"
                         >)</span
                     ></code
                 >
@@ -115,8 +88,8 @@
                 <code><span class="sql">FROM</span> dolgozók;</code>
             </p>
             <div class="kepek">
-                <img src="./images/kep_032.png" />
-                <img src="./images/kep_033.png" />
+                <img src="./images/kep_042.png" />
+                <img src="./images/kep_043.png" />
             </div>
             <p>
                 Látható, hogy az <span class="kiemel">eredménytábla</span> a

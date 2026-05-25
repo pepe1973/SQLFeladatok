@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>GROUP BY</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">GROUP BY</a></h1>
+            <p>
+                A <span class="kiemel">GROUP BY</span> utasítás az azonos értékű
+                sorok összesítő sorokba (rekord) csoportosítására szolgál.
+            </p>
+            <p>
+                A <span class="kiemel">GROUP BY</span> utasítást szinte mindig
+                aggregáló (összesítő) függvényekkel, például
+                <span class="kiemel">COUNT()</span>,
+                <span class="kiemel">MAX()</span>,
+                <span class="kiemel">MIN()</span>,
+                <span class="kiemel">SUM()</span>,
+                <span class="kiemel">AVG()</span> együtt használják , hogy
+                számításokat végezzenek az egyes csoportokon.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT</span> Település</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">GROUP BY</span> Település;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_063.png" />
+                <img src="./images/kep_064.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Település,
+                    <span class="sql">COUNT(</span>Település<span class="sql"
+                        >)</span
+                    ></code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">GROUP BY</span> Település;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_063.png" />
+                <img src="./images/kep_065.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    >, <span class="sql">COUNT(YEAR(</span>Születés<span
+                        class="sql"
+                        >))</span
+                    ></code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">GROUP BY</span>
+                    <span class="sql">YEAR(</span>Születés<span class="sql"
+                        >)</span
+                    >;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_066.png" />
+                <img src="./images/kep_067.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Nincs közöttük ismétlődés!
+            </p>
+        </div>
+    </body>
+</html>
