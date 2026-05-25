@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>ORDER BY</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">ORDER BY</a></h1>
+            <p>
+                A <span class="kiemel">ORDER BY</span> utasítás egy
+                eredménytábla növekvő vagy csökkenő sorrendbe rendezésére
+                szolgál.
+            </p>
+            <p>
+                A <span class="kiemel">ORDER BY</span> utasítás alapértelmezés
+                szerint növekvő sorrendbe (<span class="kiemel">ASC</span>)
+                rendezi a rekordokat.
+            </p>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <p>
+                A rendezést a mező neve meletti kis nyíl jelöli és egy szám,
+                amely azt jelöli, hogy hányadik rendezést hajtjuk végre a
+                halmazon.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Név, Település,
+                    Születés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">ORDER BY</span> Név;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_002.png" />
+                <img src="./images/kep_015.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Több sorban (rekord) is szerepelhet
+                ugyanaz az érték ugyanabban az oszlopban (mező).
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Név, Település,
+                    Születés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">ORDER BY</span> Település
+                    <span class="sql">ASC</span>, Születés
+                    <span class="sql">DESC</span>;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_002.png" />
+                <img src="./images/kep_016.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Több sorban (rekord) is szerepelhet
+                ugyanaz az érték ugyanabban az oszlopban (mező).
+            </p>
+            <p>
+                Az <span class="kiemel">ORDER BY</span> után mindig balról
+                jobbra hajtja végre a rendezéseket!
+            </p>
+            <p>
+                Itt most először a
+                <span style="color: green; font-weight: bold">Település</span>
+                (növekvő - <span class="kiemel">ASC</span> alapértelmezett) majd
+                a
+                <span style="color: green; font-weight: bold">Születés</span>
+                (csökkenő <span class="kiemel">DESC</span>) szerint.
+            </p>
+        </div>
+    </body>
+</html>

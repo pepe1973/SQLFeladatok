@@ -200,10 +200,11 @@
                 <p>Minden részhez elkészíthető az SQL utasítás:</p>
                 <div class="kerdes-sql">
                     <span class="elso"
-                        >SELECT COUNT(terulet) AS "Nagyobb területű
-                        országok"</span
-                    ><span class="masodik"> FROM orszagok</span>
-                    <span class="harmadik">WHERE terulet &gt; 1000000;</span>
+                        >SELECT DATE(datum) AS Dátum, COUNT(DATE(datum)) AS
+                        Darab</span
+                    ><span class="masodik"> FROM befiz</span>
+                    <span class="harmadik">GROUP BY Dátum</span>
+                    <span class="harmadik">HAVING Darab &gt; 1;</span>
                 </div>
             </div>
             <div class="kerdesek">

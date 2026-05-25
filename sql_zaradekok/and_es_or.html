@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>AND és OR</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">AND</a></h1>
+            <p>
+                A <span class="kiemel">WHERE</span> utasítás tartalmazhat egy
+                vagy több <span class="kiemel">AND</span> operátort.
+            </p>
+            <p>
+                Az <span class="kiemel">AND</span> operátort a rekordok egynél
+                több feltétel alapján történő szűrésére használják.
+            </p>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Név, Település,
+                    Jutalom</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Település = "Szolnok"
+                    <span class="sql">AND</span> Jutalom = 5000;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_012.png" />
+                <img src="./images/kep_013.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Az <span class="kiemel">AND</span>-t tartalmazó kifejezés két
+                részből áll:
+                <span style="color: blue">Település = "Szolnok"</span> valamint
+                <span style="color: pink">Jutalom = 5000</span>.
+            </p>
+            <p>
+                Azokból a sorokból (rekord) jön a megoldás, ahol mind a két szín
+                jelen van, azaz ha mind a kettő állítás igaz!
+            </p>
+            <h1><a href="./index.html">OR</a></h1>
+            <p>
+                A <span class="kiemel">WHERE</span> utasítás tartalmazhat egy
+                vagy több <span class="kiemel">OR</span> operátort.
+            </p>
+            <p>
+                Az <span class="kiemel">OR</span> operátort a rekordok egynél
+                több feltétel alapján történő szűrésére használják.
+            </p>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Név, Település,
+                    Jutalom</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">WHERE</span> Település = "Szolnok"
+                    <span class="sql">OR</span> Jutalom = 5000;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_012.png" />
+                <img src="./images/kep_014.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll.
+            </p>
+            <p>
+                Az <span class="kiemel">OR</span>-t tartalmazó kifejezés két
+                részből áll:
+                <span style="color: blue">Település = "Szolnok"</span> valamint
+                <span style="color: pink">Jutalom = 5000</span>.
+            </p>
+            <p>
+                Azokból a sorokból (rekord) jön a megoldás, ahol legalább az
+                egyik szín jelen van, azaz ha legalább az egyik állítás igaz!
+            </p>
+        </div>
+    </body>
+</html>

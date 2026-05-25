@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>SELECT DISTINCT</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">SELECT DISTINCT</a></h1>
+            <p>
+                A <span class="kiemel">SELECT DISTINCT</span> utasítás csak
+                különböző (egyedi) értékek visszaadására szolgál egy
+                adatbázisból.
+            </p>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code><span class="sql">SELECT DISTINCT</span> Település</code>
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_004.png" />
+                <img src="./images/kep_005.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőből áll. Ha több sorban (rekord) is ugyanaz az
+                érték szerepel ugyanabban az oszlopban (mező), akkor csak a
+                legelső előfordulását veszi figyelembe.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT DISTINCT</span> Település,
+                    Jutalom</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_006.png" />
+                <img src="./images/kep_007.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Ha több sorban (rekord) is ugyanazok
+                az értékek szerepelnek ugyanazokban az oszlopokban (mező), akkor
+                csak a legelső előfordulását veszi figyelembe.
+            </p>
+            <p>
+                <span class="kiemel"
+                    >Most a két mezőt (oszlop) egyszerre kezeli!</span
+                >
+            </p>
+            <p>
+                <span class="kiemel"
+                    >Tehát ismét lehet egy mezőben (oszlop) két ugyanolyan érték
+                    az eredménytáblában!</span
+                >
+            </p>
+        </div>
+    </body>
+</html>

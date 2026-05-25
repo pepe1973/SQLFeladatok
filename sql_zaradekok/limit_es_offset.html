@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>LIMIT</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">LIMIT</a></h1>
+            <p>
+                A <span class="kiemel">LIMIT</span> utasítást a visszaadandó
+                rekordok számának korlátozására használjuk.
+            </p>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Az, Név, Település,
+                    Születés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">LIMIT</span> 5;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_021.png" />
+                <img src="./images/kep_018.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Több sorban (rekord) is szerepelhet
+                ugyanaz az érték ugyanabban az oszlopban (mező).
+            </p>
+            <p>Most csak az első 5 értékre vagyunk kíváncsiak.</p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Az, Név, Település,
+                    Születés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code><span class="sql">ORDER BY</span> Név</code>
+            </p>
+            <p>
+                <code><span class="sql">LIMIT</span> 5;</code>
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_017.png" />
+                <img src="./images/kep_025.png" />
+                <img src="./images/kep_019.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Több sorban (rekord) is szerepelhet
+                ugyanaz az érték ugyanabban az oszlopban (mező).
+            </p>
+            <p>
+                A <span class="kiemel">LIMIT</span> utasítást gyakran használjuk
+                az <span class="kiemel">ORDER BY</span> utasítással együtt.
+            </p>
+            <h1><a href="./index.html">OFFSET</a></h1>
+            <p>
+                A <span class="kiemel">OFFSET</span> utasítást is a visszaadandó
+                rekordok számának korlátozására használjuk. Ebben az esetben nem
+                szükséges az első elemtől számolnunk.
+            </p>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Az, Név, Település,
+                    Születés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">LIMIT</span> 3
+                    <span class="sql">OFFSET</span> 5;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_022.png" />
+                <img src="./images/kep_020.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Több sorban (rekord) is szerepelhet
+                ugyanaz az érték ugyanabban az oszlopban (mező).
+            </p>
+            <p>
+                Most csak az első 3 értékre vagyunk kíváncsiak, ha 5 sorral
+                később kezdjük a számolást (offset - eltolás).
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> Az, Név, Település,
+                    Születés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> dolgozók</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">LIMIT</span> 5
+                    <span class="sql">OFFSET</span> 3;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_023.png" />
+                <img src="./images/kep_024.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Több sorban (rekord) is szerepelhet
+                ugyanaz az érték ugyanabban az oszlopban (mező).
+            </p>
+            <p>
+                Most csak az első 5 értékre vagyunk kíváncsiak, ha 3 sorral
+                később kezdjük a számolást (offset - eltolás).
+            </p>
+        </div>
+    </body>
+</html>
