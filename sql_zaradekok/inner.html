@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>INNER JOIN</title>
+    </head>
+    <body>
+        <div id="keret">
+            <h1><a href="./index.html">INNER JOIN</a></h1>
+            <p>
+                A <span class="kiemel">INNER JOIN</span> utasítás csak azokat a
+                sorokat (rekord) adja vissza, amelyek mindkét táblában egyező
+                értékeket tartalmaznak.
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_078.png" />
+            </div>
+            <p>
+                A visszaadott adatokat egy
+                <span class="kiemel">eredménytáblában</span>, az úgynevezett
+                eredményhalmazban tárolja a rendszer.
+            </p>
+            <p>
+                Innentől kezdve már minden
+                <span class="kiemel">SQL</span> utasítás szabadon használható,
+                mint egytáblás esetben.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> ugyfel.nev, befiz.datum,
+                    befiz.osszeg</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> ugyfel</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">INNER JOIN</span> befiz
+                    <span class="sql">ON</span> ugyfel.azon = befiz.azon;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_082.png" />
+                <img src="./images/kep_083.png" />
+                <img src="./images/kep_081.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Megtörtént a két tábla összekötése az
+                <span class="kiemel">azon</span> mezők mentén.
+            </p>
+            <h3>Példa:</h3>
+            <p>
+                <code
+                    ><span class="sql">SELECT</span> ugyfel.nev
+                    <span class="sql">AS</span> Név, befiz.datum
+                    <span class="sql">AS</span> Dátum,
+                    <span class="sql">COUNT(</span>befiz.osszeg<span class="sql"
+                        >) AS</span
+                    >
+                    Összbefizetés</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">FROM</span> ugyfel</code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">INNER JOIN</span> befiz
+                    <span class="sql">ON</span> ugyfel.azon = befiz.azon</code
+                >
+            </p>
+            <p>
+                <code><span class="sql">GROUP BY</span> Név </code>
+            </p>
+            <p>
+                <code
+                    ><span class="sql">ORDER BY</span> Összbefizetés
+                    <span class="sql">DESC</span></code
+                >
+            </p>
+            <p>
+                <code
+                    ><span class="sql">LIMIT</span> 3
+                    <span class="sql">OFFSET</span> 2;</code
+                >
+            </p>
+            <div class="kepek">
+                <img src="./images/kep_084.png" />
+            </div>
+            <p>
+                Látható, hogy az <span class="kiemel">eredménytábla</span> a
+                kiválasztott mezőkből áll. Megtörtént a két tábla összekötése az
+                <span class="kiemel">azon</span> mezők mentén.
+            </p>
+        </div>
+    </body>
+</html>
